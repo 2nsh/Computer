@@ -3,28 +3,86 @@
 <head>
 <title>Computer - html</title>
 <meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src=colors.js></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180188218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180188218-1');
+</script>
+<link rel="stylesheet" href="style.css">
+
+<input id="night_day" type="button" value="night" onclick="
+if(document.querySelector('#night_day').value === 'night'){
+document.querySelector('body').style.backgroundColor = 'black';
+document.querySelector('body').style.color = 'white';
+document.querySelector('#night_day').value = 'day';
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+  alist[i].style.color = 'powderblue';
+  i = i + 1;
+  }
+
+} else {
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';
+document.querySelector('#night_day').value = 'night';
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+   console.log(alist[i]);
+  alist[i].style.color = 'blue';
+  i = i + 1;
+  }
+
+}
+">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180188218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180188218-1');
+</script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <h1><a href="index.html">Computer</a></h1>
-<ol>
-  <li><a href="1.html"> RAM</a></li>
-  <li><a href="2.html"> MainBoard</a></li>
-  <li><a href="3.html"> cooler</a></li>
-  <li><a href="4.html"> SSD</a></li>
-  <li><a href="5.html"> CPU</a></li>
-  <li><a href="6.html"> VGA</a></li>
-</ol>
-<h2>RAM</h2>
-<img src="RAM.jpg" width="30%">
-<p>컴퓨터의 핵심 부품 중, CPU(중앙처리장치)는 연산 작업, 보조기억장치는 각종 데이터를 보관하는 작업을 수행한다. 보조기억장치로는 HDD(하드 디스크 드라이브), SSD(솔리드 스테이트 드라이브), CD, DVD, 플로피디스크 등 다양한 종류가 존재하지만 PC(Personal Computer)와 같은 일반적인 컴퓨터에서는 대개 HDD를 의미하는 경우가 많다. 따라서 컴퓨터에서 처리되는 대부분의 작업은 HDD에 있는 데이터를 토대로 CPU가 이를 연산 처리하여 출력장치(모니터 등)로 그 결과를 표시하는 방식으로 이루어진다.</p>
+<div id="grid">
+  <ol>
+    <li><a href="1.html"> RAM</a></li>
+    <li><a href="2.html"> MainBoard</a></li>
+    <li><a href="3.html"> cooler</a></li>
+    <li><a href="4.html"> SSD</a></li>
+    <li><a href="5.html"> CPU</a></li>
+    <li><a href="6.html"> VGA</a></li>
+  </ol>
+  <div id="article">
+  <h2>RAM</h2>
+  <img src="RAM.jpg" width="30%">
+  <p>컴퓨터의 핵심 부품 중, CPU(중앙처리장치)는 연산 작업, 보조기억장치는 각종 데이터를 보관하는 작업을 수행한다. 보조기억장치로는 HDD(하드 디스크 드라이브), SSD(솔리드 스테이트 드라이브), CD, DVD, 플로피디스크 등 다양한 종류가 존재하지만 PC(Personal Computer)와 같은 일반적인 컴퓨터에서는 대개 HDD를 의미하는 경우가 많다. 따라서 컴퓨터에서 처리되는 대부분의 작업은 HDD에 있는 데이터를 토대로 CPU가 이를 연산 처리하여 출력장치(모니터 등)로 그 결과를 표시하는 방식으로 이루어진다.</p>
 
 
-때문에 이론적으로는 CPU와 HDD만을 가지고도 컴퓨터는 데이터 처리를 할 수 있다(물론, 실제로 이렇게 작동하는 컴퓨터는 없다). 다만, CPU에 비해 HDD는 동작속도가 너무나 느리다. CPU의 재료인 반도체와 HDD의 재료인 자기디스크는 데이터 처리 속도 면에서 애당초 비교의 대상이 될 수 없기 때문이다. CPU의 연산 속도가 아무리 빠르더라도 HDD에서 보내주는 데이터의 전송 속도가 워낙 느리면 고성능 CPU를 갖췄더라도 전반적인 성능이 휴대용 전자계산기 수준으로 떨어질 수도 있다. 참고로 HDD 대신 플래시 메모리 기반의 저장장치인 SSD를 쓰면 어느 정도 성능저하를 완화할 수 있으나, 이 역시 근본적인 해결책은 아니다. 이 역시 HDD보다는 빠르지만 CPU의 속도와 비교할 수 있는 수준은 아니기 때문이다.
-[네이버 지식백과] 램 [RAM] - 많을수록, 빠를수록 좋은 컴퓨터의 주기억장치 (용어로 보는 IT, 김영우, IT 동아)
-</p>
+  때문에 이론적으로는 CPU와 HDD만을 가지고도 컴퓨터는 데이터 처리를 할 수 있다(물론, 실제로 이렇게 작동하는 컴퓨터는 없다). 다만, CPU에 비해 HDD는 동작속도가 너무나 느리다. CPU의 재료인 반도체와 HDD의 재료인 자기디스크는 데이터 처리 속도 면에서 애당초 비교의 대상이 될 수 없기 때문이다. CPU의 연산 속도가 아무리 빠르더라도 HDD에서 보내주는 데이터의 전송 속도가 워낙 느리면 고성능 CPU를 갖췄더라도 전반적인 성능이 휴대용 전자계산기 수준으로 떨어질 수도 있다. 참고로 HDD 대신 플래시 메모리 기반의 저장장치인 SSD를 쓰면 어느 정도 성능저하를 완화할 수 있으나, 이 역시 근본적인 해결책은 아니다. 이 역시 HDD보다는 빠르지만 CPU의 속도와 비교할 수 있는 수준은 아니기 때문이다.
+  [네이버 지식백과] 램 [RAM] - 많을수록, 빠를수록 좋은 컴퓨터의 주기억장치 (용어로 보는 IT, 김영우, IT 동아)
+  </p>
+  </div>
+</div>
 <div id="disqus_thread"></div>
 <script>
-
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -42,3 +100,24 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f82c0d3f0e7167d0017fb19/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<input type="button" value="night" onclick="
+nighthandler(this);
+">
+
+</body>
+</html>

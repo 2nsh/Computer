@@ -3,28 +3,87 @@
 <head>
 <title>Computer - html</title>
 <meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src=colors.js></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180188218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180188218-1');
+</script>
+<link rel="stylesheet" href="style.css">
+
+<input id="night_day" type="button" value="night" onclick="
+if(document.querySelector('#night_day').value === 'night'){
+document.querySelector('body').style.backgroundColor = 'black';
+document.querySelector('body').style.color = 'white';
+document.querySelector('#night_day').value = 'day';
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+  alist[i].style.color = 'powderblue';
+  i = i + 1;
+  }
+
+} else {
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';
+document.querySelector('#night_day').value = 'night';
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+  while(i < alist.length){
+   console.log(alist[i]);
+  alist[i].style.color = 'blue';
+  i = i + 1;
+  }
+
+}
+">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180188218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180188218-1');
+</script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <h1><a href="index.html">Computer</a></h1>
-<ol>
-  <li><a href="1.html"> RAM</a></li>
-  <li><a href="2.html"> MainBoard</a></li>
-  <li><a href="3.html"> cooler</a></li>
-  <li><a href="4.html"> SSD</a></li>
-  <li><a href="5.html"> CPU</a></li>
-  <li><a href="6.html"> VGA</a></li>
-</ol>
-<h2>MainBoard</h2>
-<img src="MainBoard.jpg" width="30%">
-<p>컴퓨터 내에서 기본회로와 부품들을 담고 있는 가장 기본적이고 물리적인 하드웨어로서, 마더보드(mother board) 또는 주기판(主基板)이라고도 한다. PC의 실행 환경을 설정하고 그 정보를 유지해 주며, PC가 안정적으로 구동되게 해주고, PC의 모든 장치들의 데이터 입출력 교환을 원활하게 해주는 부분이다.
-[네이버 지식백과] 메인보드 [mainboard] (두산백과)
-</p>
-<p>메인보드에 포함되는 컴퓨터 부품들은 중앙처리장치(CPU), 마이크로프로세서, 보조프로세서(옵션), 메모리, 바이오스, 확장슬롯, 접속회로 등이다. 확장슬롯을 통해 그 외의 부품들을 추가할 수 있다. 위의 여러 가지 회로는 단단한 표면 위에 눌려 찍히는데, 보통 일괄적으로 단번에 만들어진다.
-[네이버 지식백과] 메인보드 [mainboard] (두산백과)
-</p>
-<p>설계 여하에 따라서 CPU 종류와 메모리 최대용량, 확장슬롯의 수량 등 기본성능이 규정되며, 시스템의 안정성도 밀접한 관계가 있다. 중심적인 역할은 칩세트라는 대규모 집적회로(LSI)가 담당한다. CPU와 메모리, 확장슬롯 간의 데이터 교환을 관리하는 것인데, 이 칩세트(Chip Set)의 규격이 PC의 기본구성을 결정하게 된다. 오늘날 데스크톱 컴퓨터용으로 가장 많이 사용되는 것은 IBM의 AT에 기초를 둔 AT보드이며, ATX보드는 AT보드를 개선한 것이다.
-[네이버 지식백과] 메인보드 [mainboard] (두산백과)
-</p>
+<div id="grid">
+  <ol>
+    <li><a href="1.html"> RAM</a></li>
+    <li><a href="2.html"> MainBoard</a></li>
+    <li><a href="3.html"> cooler</a></li>
+    <li><a href="4.html"> SSD</a></li>
+    <li><a href="5.html"> CPU</a></li>
+    <li><a href="6.html"> VGA</a></li>
+  </ol>
+  <div id="article">
+  <h2>MainBoard</h2>
+  <img src="MainBoard.jpg" width="30%">
+  <p>컴퓨터 내에서 기본회로와 부품들을 담고 있는 가장 기본적이고 물리적인 하드웨어로서, 마더보드(mother board) 또는 주기판(主基板)이라고도 한다. PC의 실행 환경을 설정하고 그 정보를 유지해 주며, PC가 안정적으로 구동되게 해주고, PC의 모든 장치들의 데이터 입출력 교환을 원활하게 해주는 부분이다.
+  [네이버 지식백과] 메인보드 [mainboard] (두산백과)
+  </p>
+  <p>메인보드에 포함되는 컴퓨터 부품들은 중앙처리장치(CPU), 마이크로프로세서, 보조프로세서(옵션), 메모리, 바이오스, 확장슬롯, 접속회로 등이다. 확장슬롯을 통해 그 외의 부품들을 추가할 수 있다. 위의 여러 가지 회로는 단단한 표면 위에 눌려 찍히는데, 보통 일괄적으로 단번에 만들어진다.
+  [네이버 지식백과] 메인보드 [mainboard] (두산백과)
+  </p>
+  <p>설계 여하에 따라서 CPU 종류와 메모리 최대용량, 확장슬롯의 수량 등 기본성능이 규정되며, 시스템의 안정성도 밀접한 관계가 있다. 중심적인 역할은 칩세트라는 대규모 집적회로(LSI)가 담당한다. CPU와 메모리, 확장슬롯 간의 데이터 교환을 관리하는 것인데, 이 칩세트(Chip Set)의 규격이 PC의 기본구성을 결정하게 된다. 오늘날 데스크톱 컴퓨터용으로 가장 많이 사용되는 것은 IBM의 AT에 기초를 둔 AT보드이며, ATX보드는 AT보드를 개선한 것이다.
+  [네이버 지식백과] 메인보드 [mainboard] (두산백과)
+  </p>
+  </div>
+</div>
 <div id="disqus_thread"></div>
 <script>
 
@@ -45,3 +104,24 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f82c0d3f0e7167d0017fb19/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<input type="button" value="night" onclick="
+nighthandler(this);
+">
+
+</body>
+</html>
